@@ -14,15 +14,24 @@ export const Logo = styled.img`
     height: 4.4rem;
 `;
 
+export const User = styled.div`
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+`;
+
 export const Avatar = styled.img`
     display: inline-block;
     border-radius: 50%;
     vertical-align: middle;
     height: 4.4rem;
     margin-left: 0.4rem;
-`;
-
-export const User = styled.div`
-    text-transform: uppercase;
-    font-weight: bold;
+    @media (max-width: 450px) {
+        align-self: center;
+        margin: 0;
+    }
 `;
