@@ -86,6 +86,9 @@ export const Modal = styled.div`
         max-height: 90%;
         border-radius: 0.4rem;
         padding: 1.2rem;
+        @media (min-width: 1100px) {
+            max-width: 1000px;
+        }
         & > div > img {
             width: 100%;
             display: block;
