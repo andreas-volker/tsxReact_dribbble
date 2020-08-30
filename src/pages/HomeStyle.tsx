@@ -8,6 +8,7 @@ export const HomeWrap = styled.div`
 export const Header = styled.header`
     display: flex;
     justify-content: space-between;
+    text-align: right;
 `;
 
 export const Logo = styled.img`
@@ -15,7 +16,6 @@ export const Logo = styled.img`
 `;
 
 export const User = styled.div`
-    text-align: right;
     text-transform: uppercase;
     font-weight: bold;
     @media (max-width: 450px) {
@@ -47,6 +47,7 @@ export const Gallery = styled.ul`
         & > img {
             width: 100%;
             cursor: pointer;
+            display: block;
         }
     }
     & > li {
@@ -66,5 +67,73 @@ export const Gallery = styled.ul`
 `;
 
 export const Modal = styled.div`
-    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > div {
+        background: #fff;
+        position: relative;
+        overflow: auto;
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 0.4rem;
+        padding: 1.2rem;
+        & > div > img {
+            width: 100%;
+            display: block;
+            border-radius: 0.6rem;
+        }
+        & .header {
+            padding-bottom: 1.7rem;
+            & > div {
+                @media (max-width: 450px) {
+                    display: block;
+                    width: calc(100% - 1.5rem);
+                }
+            }
+            & img {
+                margin-right: 0.7rem;
+                width: 3rem;
+                height: auto;
+                @media (max-width: 450px) {
+                    margin: 0 0 0.4rem;
+                }
+            }
+        }
+        p {
+            line-height: 1.4;
+            font-size: 0.9rem;
+            padding: 2rem 0 0.8rem;
+            color: #585858;
+        }
+        & > span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            font-size: 4rem;
+            line-height: 0.45;
+            margin: 1.5rem 0.7rem 0 0;
+            font-weight: 100;
+            &:before {
+                content: '';
+                cursor: default;
+                background: rgba(66, 66, 66, 0.8);
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                z-index: -1;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
 `;
