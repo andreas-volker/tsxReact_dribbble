@@ -4,11 +4,13 @@ export const LoginWrap = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    display: flex;
     align-items: center;
+    justify-content: center;
 `;
 
 export const Logo = styled.img`
-    padding: 13rem 0 2.8rem;
+    padding-bottom: 2.8rem;
 `;
 
 export const Entrar = styled.button`
@@ -25,6 +27,7 @@ export const Entrar = styled.button`
     position: relative;
     border-radius: 0.3rem;
     cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     &:after,
     &:before {
         right: 0;

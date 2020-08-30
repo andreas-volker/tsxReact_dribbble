@@ -48,6 +48,7 @@ export const Gallery = styled.ul`
             width: 100%;
             cursor: pointer;
             display: block;
+            border-radius: 0.6rem;
         }
     }
     & > li {
