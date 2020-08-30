@@ -193,7 +193,7 @@ input::-ms-clear {
 html,
 body,
 #root {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #222;
@@ -203,4 +203,14 @@ body,
     height: 100%;
     width: 100%;
     display: block;
+}
+
+input,
+textarea,
+button {
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#root {
+    min-width: 320px;
 }
