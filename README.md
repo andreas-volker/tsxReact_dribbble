@@ -1,3 +1,12 @@
+```console
+$ git clone https://github.com/andreas-volker/tsxReact_dribbble.git
+Cloning into 'tsxReact_dribbble'...
+$ cd tsxReact_dribbble/
+$ npm i
+$ npm start
+Starting the development server...
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
