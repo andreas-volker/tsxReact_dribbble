@@ -46,6 +46,7 @@ export const Gallery = styled.ul`
         padding: 0 1rem 1rem 0;
         & > img {
             width: 100%;
+            cursor: pointer;
         }
     }
     & > li {
@@ -62,4 +63,8 @@ export const Gallery = styled.ul`
             width: 100%;
         }
     }
+`;
+
+export const Modal = styled.div`
+    display: block;
 `;
