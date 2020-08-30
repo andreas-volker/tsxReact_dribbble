@@ -216,7 +216,3 @@ button {
     min-width: 320px;
     max-width: 1400px;
 }
-@media (min-width: 1400px) {
-    #root {
-    }
-}

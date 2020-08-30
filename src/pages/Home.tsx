@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HomeWrap, Header, Logo, User, Avatar } from './HomeStyle';
+import { HomeWrap, Header, Logo, User, Avatar, Gallery } from './HomeStyle';
 import ajax from 'utils/ajax';
 
 const id = require('utils/id');
@@ -16,7 +16,6 @@ const Home: React.FC<any> = () => {
         ajax({ url: `${id.cors}${user}` }, (data) => {
             if (data.avatar_url) setAvatarSrc(data.avatar_url);
             if (data.name) setUserName(data.name);
-            console.log(data);
         });
     }, []);
     return (
@@ -30,15 +29,15 @@ const Home: React.FC<any> = () => {
                     </User>
                 ) : null}
             </Header>
-            <ul>
+            <Gallery>
                 {shots.map((item) => {
                     return (
-                        <li>
-                            <img src={item.images.normal} />
+                        <li key={item.title}>
+                            <img src={item.images.normal} alt={item.title} />
                         </li>
                     );
                 })}
-            </ul>
+            </Gallery>
         </HomeWrap>
     );
 };
