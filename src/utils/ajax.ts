@@ -6,7 +6,6 @@ export interface Request {
 }
 
 export default function (req: Request, cb: (data: any) => void, error?: (err: XMLHttpRequest) => void) {
-    console.log(req);
     var xhr = new XMLHttpRequest();
     xhr.open(req.method || 'GET', req.url, true);
     if (localStorage.token) xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.token);

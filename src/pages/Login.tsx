@@ -39,7 +39,7 @@ export const Login: React.FC<any> = () => {
     }, []);
     return (
         <LoginWrap>
-            <Logo src="/img/logo.svg" className="App-logo" alt="logo" />
+            <Logo src="/img/logo.svg" alt="logo" />
             <Entrar onClick={authClick}>Entrar</Entrar>
         </LoginWrap>
     );
