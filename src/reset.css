@@ -203,6 +203,7 @@ body,
     height: 100%;
     width: 100%;
     display: block;
+    margin: 0 auto;
 }
 
 input,
@@ -213,4 +214,9 @@ button {
 
 #root {
     min-width: 320px;
+    max-width: 1400px;
+}
+@media (min-width: 1400px) {
+    #root {
+    }
 }

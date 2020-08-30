@@ -7,10 +7,11 @@ const user = 'https://api.dribbble.com/v2/user/';
 
 const Home: React.FC<any> = () => {
     const [userName, setUserName] = useState(''),
-        [avatarSrc, setAvatarSrc] = useState('');
+        [avatarSrc, setAvatarSrc] = useState(''),
+        [shots, setShots] = useState<any[]>([]);
     useEffect(() => {
         ajax({ url: `${id.cors}${user}shots?page=1` }, (data) => {
-            console.log(data);
+            setShots(data);
         });
         ajax({ url: `${id.cors}${user}` }, (data) => {
             if (data.avatar_url) setAvatarSrc(data.avatar_url);
@@ -29,6 +30,15 @@ const Home: React.FC<any> = () => {
                     </User>
                 ) : null}
             </Header>
+            <ul>
+                {shots.map((item) => {
+                    return (
+                        <li>
+                            <img src={item.images.normal} />
+                        </li>
+                    );
+                })}
+            </ul>
         </HomeWrap>
     );
 };
